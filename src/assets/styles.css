@@ -1,0 +1,142 @@
+/* Modo oscuro */
+.dark-mode {
+  background: #333;
+  color: #fff;
+}
+.dark-mode .container-fluid {
+  background: linear-gradient(
+    to bottom right,
+    #1a1a1a,
+    #333,
+    #555,
+    #333,
+    #1a1a1a
+  );
+}
+.dark-mode .text h1,
+.dark-mode .navbar-brand span,
+.dark-mode .navlink a {
+  color: #ddd;
+}
+.dark-mode .navbar {
+  background: #222 !important;
+}
+.dark-mode .footer {
+  background: #222 !important;
+}
+
+/* Estilos globales */
+.container-fluid {
+  position: relative;
+  background: linear-gradient(
+    to bottom right,
+    #01014a,
+    #010147,
+    #031d6d,
+    #030359,
+    #060681
+  );
+  background-size: 200% 200%;
+  animation: gradientMovement 10s linear infinite;
+}
+
+@keyframes gradientMovement {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.logo-rectangular {
+  background-color: #fff;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text h1,
+.text h2 {
+  color: #fff;
+  font-size: 3em !important;
+}
+
+.gap {
+  margin: 5px;
+}
+
+.canvas-confetti-btn {
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.tool-tip {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  animation: shake 3s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  background-color: #fff;
+  color: #000;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  color: rgb(100, 100, 100);
+}
+
+.tool-tip:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+}
+
+.canvas-confetti-btn:hover .tool-tip {
+  animation: none;
+  opacity: 0;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(0, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(0, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(0, 4px, 0);
+  }
+}
+
+.navbar,
+.footer {
+  background-color: #fa002c;
+}
