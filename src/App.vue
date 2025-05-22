@@ -5,7 +5,9 @@
       @toggle-dark-mode="toggleDarkMode"
       @change-language="changeLanguage"
     />
-    <router-view :is-dark-mode="isDarkMode" />
+    <main class="flex-grow-1">
+      <router-view :is-dark-mode="isDarkMode" />
+    </main>
     <Footer :is-dark-mode="isDarkMode" />
   </div>
 </template>
@@ -37,5 +39,9 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }
 </style>
