@@ -3,6 +3,7 @@ import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
   plugins: [vue()],
+  base: "/basketVUE-Frontend-VUE/", // 👈 base para GitHub Pages
   server: {
     proxy: {
       "/api": {
